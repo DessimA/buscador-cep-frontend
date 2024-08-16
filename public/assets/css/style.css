@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     /* Garante que o formulário ocupe a largura total em telas pequenas */
-    width: 100%; 
+    width: 70%; 
   }
   
   label {
