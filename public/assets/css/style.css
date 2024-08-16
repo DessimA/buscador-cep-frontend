@@ -2,145 +2,159 @@
 :root {
     --cor-principal: #283747;
     --cor-secundaria: #c5c8e6;
-    --cor-destaque: #2196F3; /* Azul vibrante */
+    --cor-destaque: #2196F3;
+    /* Azul vibrante */
     --cor-texto: #333;
     --cor-erro: #C0392B;
-  }
-  
-  /* Estilos Gerais */
-  body {
-    font-family: 'Arial', sans-serif; /* Fonte mais moderna */
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Fonte mais moderna */
     margin: 0;
     padding-bottom: 60px;
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
     overflow-x: hidden;
-  }
-  
-  /* Cabeçalho */
-  header {
+}
+
+/* Cabeçalho */
+header {
     background-color: var(--cor-principal);
-    padding: 15px 0; /* Aumento do padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    padding: 15px 0;
+    /* Aumento do padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra mais suave */
     color: #fff;
     width: 100%;
-    box-sizing: border-box; 
-  }
-  
-  .logo {
+    box-sizing: border-box;
+}
+
+.logo {
     display: block;
-    margin: 0 auto; 
-    height: 40px; 
-  }
-  
-  .logo img {
+    margin: 0 auto;
+    height: 40px;
+}
+
+.logo img {
     height: 100%;
-  }
-  
-  /* Container Principal */
-  .container {
+}
+
+/* Container Principal */
+.container {
     width: 90%;
     max-width: 500px;
-    margin: 30px auto; /* Mais margem superior/inferior */
-    padding: 30px; 
+    margin: 30px auto;
+    /* Mais margem superior/inferior */
+    padding: 30px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título */
-  h1 {
+}
+
+/* Título */
+h1 {
     text-align: center;
-    margin-bottom: 30px; /* Aumento da margem */
+    margin-bottom: 30px;
+    /* Aumento da margem */
     color: var(--cor-principal);
-  }
-  
-  /* Formulário */
-  form {
+}
+
+/* Formulário */
+form {
     display: flex;
     flex-direction: column;
-    width: 100%; 
-  }
-  
-  label {
-    margin-bottom: 8px;
-    font-weight: 600; /* Negrito mais leve */
-  }
-  
-  input[type="text"] {
-    padding: 12px; /* Aumento do padding */
-    border: 1px solid #ddd; /* Borda mais suave */
-    border-radius: 6px; /* Cantos mais arredondados */
-    margin-bottom: 20px; /* Aumento da margem */
+    width: 100%;
+    box-sizing: border-box;
+    /* IMPORTANTE: Inclui padding e border no cálculo da largura */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
     font-size: 16px;
-    box-sizing: border-box; /* Inclui padding e border na largura */
-  }
-  
-  button {
-    padding: 12px 20px; 
-    background-color: var(--cor-destaque); 
+    box-sizing: border-box;
+    /* Inclui padding e border na largura do input */
+    width: 100%;
+    /* Ocupa toda a largura disponível dentro do formulário */
+}
+
+button {
+    padding: 12px 20px;
+    background-color: var(--cor-destaque);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 6px;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.1s ease; /* Adiciona efeito de escala */
-  }
-  
-  button:hover {
-    background-color: darken(var(--cor-destaque), 10%); /* Escurece ao passar o mouse */
-    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
-  }
-  
-  /* Resultados */
-  .endereco-info {
-    margin-top: 30px; /* Aumento da margem */
-  }
-  
-  .endereco-info p {
-    margin-bottom: 8px; 
-  }
-  
-  /* Mensagem de Erro */
-  .error-message {
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    /* Adiciona efeito de escala */
+}
+
+button:hover {
+    background-color: darken(var(--cor-destaque), 10%);
+    /* Escurece ao passar o mouse */
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+}
+
+/* Resultados */
+.endereco-info {
+    margin-top: 30px;
+    /* Aumento da margem */
+}
+
+.endereco-info p {
+    margin-bottom: 8px;
+}
+
+/* Mensagem de Erro */
+.error-message {
     color: var(--cor-erro);
     font-weight: bold;
     margin-top: 10px;
-  }
-  
-  /* Rodapé */
-  footer {
+}
+
+/* Rodapé */
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-principal);
     color: #fff;
-    padding: 15px; /* Aumento do padding */
+    padding: 15px;
+    /* Aumento do padding */
     text-align: center;
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     width: 100%;
-  }
-  
-  footer a {
+}
+
+footer a {
     display: inline-block;
     margin: 0 10px;
-  }
-  
-  footer img {
+}
+
+footer img {
     width: 24px;
     height: 24px;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 600px) {
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
     .container {
-      width: 95%;
-      padding: 20px; /* Padding menor em telas pequenas */
+        width: 95%;
+        padding: 20px;
+        /* Padding menor em telas pequenas */
     }
-  
-    input[type="text"], 
-    button {
-      font-size: 14px; 
+
+    input[type="text"] {
+        font-size: 14px;
     }
-  }
+}
