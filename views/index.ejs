@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo do site">
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Buscador de CEP</h1>
+
+        <form action="/consultar" method="post">
+            <label for="cep">Digite o CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000">
+            <button type="submit">Consultar</button>
+        </form>
+
+        <% if (erro) { %>
+            <p class="error-message">
+                <%= erro %>
+            </p>
+            <% } else if (endereco) { %>
+                <div class="endereco-info">
+                    <h2>Endereço</h2>
+                    <p>CEP: <%= endereco.cep %>
+                    </p>
+                    <p>Logradouro: <%= endereco.logradouro %>
+                    </p>
+                    <p>Complemento: <%= endereco.complemento %>
+                    </p>
+                    <p>Bairro: <%= endereco.bairro %>
+                    </p>
+                    <p>Localidade: <%= endereco.localidade %> - <%= endereco.uf %>
+                    </p>
+                    <p>IBGE: <%= endereco.ibge %>
+                    </p>
+                    <p>GIA: <%= endereco.gia %>
+                    </p>
+                    <p>DDD: <%= endereco.ddd %>
+                    </p>
+                    <p>SIAFI: <%= endereco.siafi %>
+                    </p>
+                </div>
+                <% } %>
+    </div>
+
+    <footer>
+        © 2024 Desenvolvido por [Seu Nome]
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/seuperfil/" target="_blank"> 
+            <img src="assets/images/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/seuperfil" target="_blank"> 
+            <img src="assets/images/github.png" alt="GitHub">
+          </a>
+        </div>  
+      </footer>
+</body>
+
+</html>
