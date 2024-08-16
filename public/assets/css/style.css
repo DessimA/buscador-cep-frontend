@@ -4,6 +4,8 @@ body {
     padding-bottom: 60px;
     background-color: #c5c8e6;
     color: #333333;
+    /* Impede a rolagem horizontal */
+    overflow-x: hidden; 
   }
   
   header {
@@ -11,13 +13,16 @@ body {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #fff;
+    /* Garante que o cabeçalho ocupe a largura total */
+    width: 100%; 
+    box-sizing: border-box;
   }
   
   .container {
-    width: 90%; /* Largura relativa à tela */
-    max-width: 500px; /* Largura máxima */
-    margin: 20px auto; /* Margens automáticas para centralizar */
-    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    margin: 10px auto; /* Margem menor em telas pequenas */
+    padding: 20px; 
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -32,6 +37,8 @@ body {
   form {
     display: flex;
     flex-direction: column;
+    /* Garante que o formulário ocupe a largura total em telas pequenas */
+    width: 100%; 
   }
   
   label {
@@ -70,15 +77,15 @@ body {
     color: #fff;
     padding: 10px;
     text-align: center;
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     width: 100%;
   }
   
   .logo {
-    display: block; /* Para centralizar a logo */
-    margin: 0 auto 10px auto; /* Margens automáticas */
-    height: 30px; /* Ajuste a altura conforme necessário */
+    display: block;
+    margin: 0 auto 10px auto; 
+    height: 30px; 
   }
   
   .logo img {
@@ -109,25 +116,14 @@ body {
     margin-top: 10px;
   }
   
+  /* Media Queries para Responsividade */
   @media (max-width: 600px) {
     .container {
-      width: 95%; /* Ajuste a largura conforme necessário */
-      padding: 20px; /* Diminua o espaçamento interno em telas pequenas */
+      width: 100%; 
     }
   
-    input[type="text"],
+    input[type="text"], 
     button {
-      font-size: 14px;
+      font-size: 14px; 
     }
-  
-    /* Ajuste adicional para o formulário em telas pequenas */
-    form {
-      width: 100%; /* Garante que o formulário ocupe a largura total */
-    } 
-  }
-  
-  /* Correção para a barra superior */
-  header {
-    width: 100%; /* Garante que o cabeçalho ocupe a largura total */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
   }
