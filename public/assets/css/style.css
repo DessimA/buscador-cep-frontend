@@ -4,124 +4,119 @@ body {
     padding-bottom: 60px;
     background-color: #c5c8e6;
     color: #333333;
-
-}
-
-header {
+  }
+  
+  header {
     background-color: #283747;
-
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #fff;
-
-}
-
-.container {
-    width: 500px;
-    margin: 50px auto;
+  }
+  
+  .container {
+    width: 90%; /* Largura relativa à tela */
+    max-width: 500px; /* Largura máxima */
+    margin: 20px auto; /* Margens automáticas para centralizar */
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #283747;
-
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-label {
+  }
+  
+  label {
     margin-bottom: 5px;
     font-weight: bold;
-
-}
-
-input[type="text"] {
+  }
+  
+  input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 16px;
-
-}
-
-button {
+  }
+  
+  button {
     padding: 10px 20px;
     background-color: #213228;
-    /* Verde */
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    /* Tamanho da fonte do botão */
     transition: background-color 0.3s ease;
-    /* Efeito de transição suave */
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #27ae60;
-    /* Verde mais escuro ao passar o mouse */
-}
-
-footer {
+  }
+  
+  footer {
     display: flex;
-    /* Ativa o Flexbox no rodapé */
     flex-direction: column;
-    /* Alinha os itens em coluna */
     align-items: center;
-    /* Centraliza horizontalmente */
     background-color: #283747;
-    /* Azul escuro */
     color: #fff;
-    /* Texto branco no rodapé */
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: fixed; 
     bottom: 0;
     width: 100%;
-}
-
-.logo {
-    display: inline-block;
-    height: 40px;
-    margin-left: 20px;
-}
-
-.logo img {
+  }
+  
+  .logo {
+    display: block; /* Para centralizar a logo */
+    margin: 0 auto 10px auto; /* Margens automáticas */
+    height: 30px; /* Ajuste a altura conforme necessário */
+  }
+  
+  .logo img {
     height: 100%;
-}
-
-.endereco-info {
+  }
+  
+  .endereco-info {
     margin-top: 20px;
-}
-
-.endereco-info p {
+  }
+  
+  .endereco-info p {
     margin-bottom: 5px;
-}
-
-footer a {
+  }
+  
+  footer a {
     display: inline-block;
     margin: 0 10px;
-}
-
-footer img {
+  }
+  
+  footer img {
     width: 24px;
     height: 24px;
-}
-
-.error-message {
+  }
+  
+  .error-message {
     color: #C0392B;
-    /* Vermelho */
     font-weight: bold;
-    /* Destaque para a mensagem de erro */
     margin-top: 10px;
-    /* Espaçamento superior */
-}
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 600px) { 
+    .container {
+      width: 95%; /* Ajuste conforme necessário */
+    }
+  
+    input[type="text"], 
+    button {
+      font-size: 14px; /* Diminui a fonte em telas menores */
+    }
+  }
