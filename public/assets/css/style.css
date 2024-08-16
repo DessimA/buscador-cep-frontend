@@ -109,14 +109,25 @@ body {
     margin-top: 10px;
   }
   
-  /* Media Queries para Responsividade */
-  @media (max-width: 600px) { 
+  @media (max-width: 600px) {
     .container {
-      width: 95%; /* Ajuste conforme necessário */
+      width: 95%; /* Ajuste a largura conforme necessário */
+      padding: 20px; /* Diminua o espaçamento interno em telas pequenas */
     }
   
-    input[type="text"], 
+    input[type="text"],
     button {
-      font-size: 14px; /* Diminui a fonte em telas menores */
+      font-size: 14px;
     }
+  
+    /* Ajuste adicional para o formulário em telas pequenas */
+    form {
+      width: 100%; /* Garante que o formulário ocupe a largura total */
+    } 
+  }
+  
+  /* Correção para a barra superior */
+  header {
+    width: 100%; /* Garante que o cabeçalho ocupe a largura total */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
   }
