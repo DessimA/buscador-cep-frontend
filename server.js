@@ -19,7 +19,7 @@ app.post('/consultar', async (req, res) => {
   const cep = req.body.cep.replace(/\D/g, '');
 
   try {
-    const response = await fetch(`http://localhost:8080/consultar?cep=${cep}`); 
+    const response = await fetch(`https://buscadorcep-api.up.railway.app/consultar?cep=${cep}`); 
     const data = await response.json();
 
     res.setHeader('Cache-Control', 'public, max-age=3600'); 
